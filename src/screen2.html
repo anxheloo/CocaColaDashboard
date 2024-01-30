@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link
+      href="fontawesome-free-6.5.1-web/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="fontawesome-free-6.5.1-web/css/css/brands.css"
+      rel="stylesheet"
+    />
+    <link href="fontawesome-free-6.5.1-web/css/solid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="min-h-screen flex flex-col justify-between">
+    <header class="bg-red-600 h-[320px] relative">
+      <div class="bg-black bg-opacity-20">
+        <div class="h-[70px] flex justify-between items-center px-10">
+          <img
+            src="https://pos.ccbs.al/assets/img/logo-white.svg"
+            width="120px"
+            class="cursor-pointer"
+          />
+
+          <div>
+            <div class="gap-3 items-center text-white hidden lg:flex">
+              <a href="#" class="px-5">KREU</a>
+              <a href="#" class="px-5">SHITJET E MIA</a>
+              <a href="#" class="px-5">RAPORTE</a>
+              <div class="px-2 text-2xl text-black opacity-20">|</div>
+              <div class="px-5 cursor-pointer">
+                DIL &nbsp;
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-bars lg:hidden text-white text-2xl"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-[90%] sm:w-[70%] m-auto bg-white bg-opacity-30 p-2 flex items-center justify-between rounded-[4px] absolute bottom-[40px] right-0 left-0"
+      >
+        <form class="flex flex-1 items-center" id="form">
+          <i class="fa-solid fa-table-cells p-2" style="color: #ffffff"></i>
+          <input
+            id="kodiKuponit"
+            type="text"
+            placeholder="Shkruaj kodin e kuponit"
+            class="flex-1 bg-transparent h-[100%] outline-none px-3 text-white placeholder-white text-sm"
+          />
+        </form>
+
+        <button
+          class="bg-white px-4 border-none rounded-[4px] text-red-600 flex items-center justify-between w-[120px] sm:w-[150px] h-[45px]"
+          onclick="submitForm()"
+        >
+          <div class="font-bold text-sm">Dergo</div>
+          <div class="font-bold">></div>
+        </button>
+      </div>
+    </header>
+
+    <main class="flex-1 p-5">
+      <div class="mt-9 flex flex-col gap-5">
+        <div class="w-full xl:w-[70%] m-auto border text-center py-4">
+          10 Shitjet e fundit
+        </div>
+
+        <!-- table-auto -->
+        <!-- sm:w-[70%] -->
+        <div class="overflow-auto">
+          <table class="w-[1000px] lg:w-full xl:w-[70%] m-auto border">
+            <!-- <table class="table-fixed  m-auto border"></table> -->
+            <thead>
+              <tr class="h-[60px]">
+                <th class="text-left"></th>
+                <th class="text-left">#</th>
+                <th class="text-left">Kuponi</th>
+                <th class="text-left w-[30%]">Produkti</th>
+                <th class="text-left w-[15%]">Vlera</th>
+                <th class="text-left w-[15%]">Ulja e perfituar</th>
+                <th class="text-right w-[20%]">Data</th>
+                <th class="text-left"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="border h-[60px]">
+                <td class="text-left"></td>
+                <td class="text-left">1</td>
+                <td class="text-left">12345678</td>
+                <td class="text-left">Test</td>
+                <td class="text-left">
+                  <div>100 Lek</div>
+                  <div>50 Lek</div>
+                </td>
+                <td class="text-left">50 Lek</td>
+                <td class="text-right">02:53:20 / 25-04-2023</td>
+                <td class="text-left"></td>
+              </tr>
+
+              <tr class="border h-[60px]">
+                <td class="text-left"></td>
+                <td class="text-left">1</td>
+                <td class="text-left">12345678</td>
+                <td class="text-left">Test</td>
+                <td class="text-left">
+                  <div>100 Lek</div>
+                  <div>50 Lek</div>
+                </td>
+                <td class="text-left">50 Lek</td>
+                <td class="text-right">02:53:20 / 25-04-2023</td>
+                <td class="text-left"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="flex flex-col space-y-3 md:flex-row md:justify-between border-t-[1px] items-center py-2 px-5"
+    >
+      <div class="text-black text-[12px] text-center">
+        @ 2023
+        <span class="text-black font-bold">THE COCA-COLA COMPANY.</span>TE
+        GJITHA TE DREJTAT TE REZERVUARA
+      </div>
+
+      <img
+        src="./img/logo-black.svg"
+        class="hidden xl:inline xl:absolute xl:right-0 xl:left-0 xl:m-auto"
+      />
+
+      <div class="flex flex-row gap-1">
+        <img src="https://pos.ccbs.al/assets/img/facebook.svg" width="25px" />
+        <img src="https://pos.ccbs.al/assets/img/instagram.svg" width="25px" />
+      </div>
+    </footer>
+
+    <script>
+      const submitForm = () => {
+        // event.preventDefault();
+
+        const form = document.getElementById("form");
+        const kodiKuponit = document.getElementById("kodiKuponit").value;
+
+        console.log("Form Submited!");
+        console.log("This is kodiKuponit!:", kodiKuponit);
+      };
+    </script>
+  </body>
+</html>
